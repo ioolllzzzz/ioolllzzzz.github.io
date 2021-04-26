@@ -6,32 +6,76 @@ layout: default
   <wired-button class="btn" onclick="doLucky('qxc')">QiXingCai</wired-button>
   <wired-button class="btn" onclick="doLucky('dlt')">DaLeTou</wired-button>
   <wired-button class="btn" onclick="doLucky('ssq')">ShuangSeQiu</wired-button>
+  <br><br>
+  <wired-button class="btn" onclick="newGo('dlt')">DaLeTou-go🎰</wired-button>
+  <wired-button class="btn" onclick="newDone('dlt')" unlock='dlt'>DaLeTou-done💰</wired-button>
+  <br><br>
+  <wired-button class="btn" onclick="newGo('ssq')">SSQ-go🎰</wired-button>
+  <wired-button class="btn" onclick="newDone('ssq')" unlock='ssq'>SSQ-done💰</wired-button>
 </div>
 <div class="shows" style="letter-spacing: 8px; font-size: 24px; font-weight: 600;margin-top: 20px;"></div>
 
 
 <script>
+  //#region old
   var __encode = 'sojson.com', _0xb483 = ["\x5F\x64\x65\x63\x6F\x64\x65", "\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x73\x6F\x6A\x73\x6F\x6E\x2E\x63\x6F\x6D\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x6F\x62\x66\x75\x73\x63\x61\x74\x6F\x72\x2E\x68\x74\x6D\x6C"]; (function (_0xd642x1) { _0xd642x1[_0xb483[0]] = _0xb483[1] })(window); var __Ox7c334 = ["\x71\x78\x63", "\x70\x75\x73\x68", "\x6C\x65\x6E\x67\x74\x68", "\x72\x61\x6E\x64\x6F\x6D", "\x66\x6C\x6F\x6F\x72", "\x75\x6E\x73\x68\x69\x66\x74", "\x73\x70\x6C\x69\x63\x65", "", "\x6A\x6F\x69\x6E", "\x2C", "\x73\x6F\x72\x74", "\x2D", "\x61\x72\x72", "\x6F\x75\x74\x47\x61\x70", "\x64\x6F\x6E\x65\x4C\x65\x6E", "\x61\x72\x72\x52\x65\x64", "\x61\x72\x72\x42\x6C\x75\x65", "\x2D\x2D\x3E", "\x6C\x6F\x67", "\uD83C\uDF89\uD83C\uDF8A"];;; function lucky(_0x3f65x2) { _0x3f65x2 = _0x3f65x2 || __Ox7c334[0x0]; const _0x3f65x3 = function (_0x3f65x4, _0x3f65x5) { let _0x3f65x6 = []; for (let _0x3f65x7 = _0x3f65x4; _0x3f65x7 <= _0x3f65x5; _0x3f65x7++) { _0x3f65x6[__Ox7c334[0x1]](_0x3f65x7) }; return _0x3f65x6 }; const _0x3f65x8 = function (_0x3f65x4) { let _0x3f65x9 = []; let _0x3f65xa = _0x3f65x4[__Ox7c334[0x2]]; while (_0x3f65xa > 0) { _0x3f65xa--; let _0x3f65xb = _0x3f65x4[__Ox7c334[0x2]]; let _0x3f65xc = Math[__Ox7c334[0x4]](Math[__Ox7c334[0x3]]() * _0x3f65xb); let _0x3f65xd = _0x3f65x4[_0x3f65xc]; _0x3f65x9[__Ox7c334[0x5]](_0x3f65xd); let _0x3f65xe = _0x3f65x4[__Ox7c334[0x6]](_0x3f65xb - 1, 1)[0x0]; if (_0x3f65xc !== _0x3f65xb - 1) { _0x3f65x4[_0x3f65xc] = _0x3f65xe } }; _0x3f65x4 = _0x3f65x9; return _0x3f65x9 }; const _0x3f65xf = ({ qxc: { outGap: 888, doneLen: 7, arr: _0x3f65x3(0, 9), toString: (_0x3f65x6) => _0x3f65x6[__Ox7c334[0x8]](__Ox7c334[0x7]) }, dlt: { outGap: [588, 888], doneLen: [5, 2], arrRed: _0x3f65x3(1, 35), arrBlue: _0x3f65x3(1, 12), toString: (_0x3f65x6) => { let _0x3f65x10 = _0x3f65x6[__Ox7c334[0x6]](5, 2); return _0x3f65x6[__Ox7c334[0xa]]((_0x3f65x4, _0x3f65x5) => _0x3f65x4 - _0x3f65x5)[__Ox7c334[0x8]](__Ox7c334[0x9]) + __Ox7c334[0xb] + _0x3f65x10[__Ox7c334[0xa]]((_0x3f65x4, _0x3f65x5) => _0x3f65x4 - _0x3f65x5)[__Ox7c334[0x8]](__Ox7c334[0x9]) } }, ssq: { outGap: [588, 1888], doneLen: [6, 1], arrRed: _0x3f65x3(1, 33), arrBlue: _0x3f65x3(1, 16), toString: (_0x3f65x6) => { let _0x3f65x10 = _0x3f65x6[__Ox7c334[0x6]](6, 1); return _0x3f65x6[__Ox7c334[0xa]]((_0x3f65x4, _0x3f65x5) => _0x3f65x4 - _0x3f65x5)[__Ox7c334[0x8]](__Ox7c334[0x9]) + __Ox7c334[0xb] + _0x3f65x10[0x0] } } })[_0x3f65x2]; const _0x3f65x11 = []; let _0x3f65x12 = false; let _0x3f65x13 = + new Date(); let _0x3f65x14 = 0; while (!_0x3f65x12) { if (_0x3f65x2 === __Ox7c334[0x0]) { while (+ new Date() - _0x3f65x13 < _0x3f65xf[__Ox7c334[0xd]]) { _0x3f65xf[__Ox7c334[0xc]] = _0x3f65x8(_0x3f65xf[__Ox7c334[0xc]]); _0x3f65x14++ }; _0x3f65x11[__Ox7c334[0x1]](_0x3f65xf[__Ox7c334[0xc]][0x0]); _0x3f65x12 = _0x3f65x11[__Ox7c334[0x2]] === _0x3f65xf[__Ox7c334[0xe]] } else { const [redGap, blueGap] = _0x3f65xf[__Ox7c334[0xd]]; const [redDoneLen, blueDoneLen] = _0x3f65xf[__Ox7c334[0xe]]; if (_0x3f65x11[__Ox7c334[0x2]] < redDoneLen) { while (+ new Date() - _0x3f65x13 < redGap) { _0x3f65xf[__Ox7c334[0xf]] = _0x3f65x8(_0x3f65xf[__Ox7c334[0xf]]); _0x3f65x14++ }; _0x3f65x11[__Ox7c334[0x1]](_0x3f65xf[__Ox7c334[0xf]][__Ox7c334[0x6]](0, 1)[0x0]) } else { while (+ new Date() - _0x3f65x13 < blueGap) { _0x3f65xf[__Ox7c334[0x10]] = _0x3f65x8(_0x3f65xf[__Ox7c334[0x10]]); _0x3f65x14++ }; _0x3f65x11[__Ox7c334[0x1]](_0x3f65xf[__Ox7c334[0x10]][__Ox7c334[0x6]](0, 1)[0x0]) }; _0x3f65x12 = _0x3f65x11[__Ox7c334[0x2]] === redDoneLen + blueDoneLen }; _0x3f65x13 = + new Date(); console[__Ox7c334[0x12]](__Ox7c334[0x11], _0x3f65x14, _0x3f65x11) }; let _0x3f65x15 = _0x3f65xf.toString(_0x3f65x11); console[__Ox7c334[0x12]](__Ox7c334[0x13], _0x3f65x15); return _0x3f65x15 }
+  //#endregion
+
+  //#region newssq
+  var __encode = 'jsjiami.com', _a = {}, _0xb483 = ["\x5F\x64\x65\x63\x6F\x64\x65", "\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x73\x6F\x6A\x73\x6F\x6E\x2E\x63\x6F\x6D\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x6F\x62\x66\x75\x73\x63\x61\x74\x6F\x72\x2E\x68\x74\x6D\x6C"]; (function (_0xd642x1) { _0xd642x1[_0xb483[0]] = _0xb483[1] })(_a); var __Oxbc051 = ["\x6C\x65\x6E\x67\x74\x68", "\x2C", "\x6A\x6F\x69\x6E", "\x73\x6C\x69\x63\x65", "\x70\x75\x73\x68", "\x6D\x61\x70", "\x66\x72\x6F\x6D", "\x72\x61\x6E\x64\x6F\x6D", "\x66\x6C\x6F\x6F\x72", "\x73\x73\x71", "\x64\x6C\x74", "\x2D", "\x75\x6E\x64\x65\x66\x69\x6E\x65\x64", "\x6C\x6F\x67", "\u5220\u9664", "\u7248\u672C\u53F7\uFF0C\x6A\x73\u4F1A\u5B9A", "\u671F\u5F39\u7A97\uFF0C", "\u8FD8\u8BF7\u652F\u6301\u6211\u4EEC\u7684\u5DE5\u4F5C", "\x6A\x73\x6A\x69\x61", "\x6D\x69\x2E\x63\x6F\x6D"]; function combination(_0x6877x2, _0x6877x3) { let _0x6877x4 = []; _0x6877x5([], _0x6877x2, _0x6877x3); return _0x6877x4; function _0x6877x5(_0x6877x6, _0x6877x7, _0x6877x3) { if (_0x6877x3 === 0) { _0x6877x4[_0x6877x4[__Oxbc051[0x0]]] = _0x6877x6[__Oxbc051[0x2]](__Oxbc051[0x1]); return }; for (let _0x6877x8 = 0; _0x6877x8 <= _0x6877x7[__Oxbc051[0x0]] - _0x6877x3; _0x6877x8++) { let _0x6877x9 = _0x6877x6[__Oxbc051[0x3]](); _0x6877x9[__Oxbc051[0x4]](_0x6877x7[_0x6877x8]); _0x6877x5(_0x6877x9, _0x6877x7[__Oxbc051[0x3]](_0x6877x8 + 1), _0x6877x3 - 1) } } } var frontZone = { ssq: combination(Array[__Oxbc051[0x6]]({ length: 33 })[__Oxbc051[0x5]]((_0x6877x8, _0x6877xb) => { return _0x6877xb + 1 }), 6), dlt: combination(Array[__Oxbc051[0x6]]({ length: 35 })[__Oxbc051[0x5]]((_0x6877x8, _0x6877xb) => { return _0x6877xb + 1 }), 5) }; var backZone = { ssq: combination(Array[__Oxbc051[0x6]]({ length: 16 })[__Oxbc051[0x5]]((_0x6877x8, _0x6877xb) => { return _0x6877xb + 1 }), 1), dlt: combination(Array[__Oxbc051[0x6]]({ length: 12 })[__Oxbc051[0x5]]((_0x6877x8, _0x6877xb) => { return _0x6877xb + 1 }), 2) }; function randIdx(_0x6877x3) { return Math[__Oxbc051[0x8]](Math[__Oxbc051[0x7]]() * (_0x6877x3 + 1)) } function rand(_0x6877xf) { if (_0x6877xf !== __Oxbc051[0x9] || _0x6877xf !== __Oxbc051[0xa]) { _0x6877xf = __Oxbc051[0x9] }; var _0x6877x10 = frontZone[_0x6877xf]; var _0x6877x11 = backZone[_0x6877xf]; var _0x6877x12 = randIdx(_0x6877x10[__Oxbc051[0x0]] - 1); var _0x6877x13 = _0x6877x10[_0x6877x12]; var _0x6877x14 = randIdx(_0x6877x11[__Oxbc051[0x0]] - 1); var _0x6877x15 = _0x6877x11[_0x6877x14]; return _0x6877x13 + __Oxbc051[0xb] + _0x6877x15 } (function (_0x6877x9, _0x6877x16, _0x6877x17, _0x6877x18, _0x6877x19, _0x6877x1a) { _0x6877x1a = __Oxbc051[0xc]; _0x6877x18 = function (_0x6877x3) { if (typeof alert !== _0x6877x1a) { alert(_0x6877x3) }; if (typeof console !== _0x6877x1a) { console[__Oxbc051[0xd]](_0x6877x3) } }; _0x6877x17 = function (_0x6877x7, _0x6877x9) { return _0x6877x7 + _0x6877x9 }; _0x6877x19 = _0x6877x17(__Oxbc051[0xe], _0x6877x17(_0x6877x17(__Oxbc051[0xf], __Oxbc051[0x10]), __Oxbc051[0x11])); try { _0x6877x9 = __encode; if (!(typeof _0x6877x9 !== _0x6877x1a && _0x6877x9 === _0x6877x17(__Oxbc051[0x12], __Oxbc051[0x13]))) { _0x6877x18(_0x6877x19) } } catch (e) { _0x6877x18(_0x6877x19) } })({})
+  //#endregion
 
   var $show = document.querySelector('.shows')
   var btns = document.querySelectorAll('.btn')
-  var randing = false
-  function doLucky(type) {
-    if (randing) return
-    randing = true
+  var locked = false
+
+  function lock(type) {
+    locked = type
     btns.forEach(i => {
+      if (i.getAttribute('unlock') === type) return
+
       i.setAttribute('disabled', 'disabled')
     })
+
+  }
+  function unlock() {
+    btns.forEach(i => {
+      i.removeAttribute('disabled')
+    })
+    locked = false
+  }
+
+  function doLucky(type) {
+    if (locked) return
+    lock(type)
+
     $show.innerHTML = 'Please wait···'
 
     setTimeout(() => {
       var ret = lucky(type || 'qxc')
       $show.innerHTML = type + ': ' + ret
 
-      btns.forEach(i => {
-        i.removeAttribute('disabled')
-      })
-      randing = false
-    }, 100);
+      unlock()
+    }, 88)
   }
+
+  // new
+  var newLoop = null
+  function newGo(type) {
+    if (locked) return
+    lock(type)
+
+    clearInterval(newLoop)
+
+    var loopCount = 0
+    newLoop = setInterval(() => {
+      $show.innerHTML = type + '(' + (++loopCount) + '): ' + rand(type)
+    }, 58)
+  }
+  function newDone(type) {
+    if (type !== locked) return
+    clearInterval(newLoop)
+    unlock()
+  }
+
 </script>
