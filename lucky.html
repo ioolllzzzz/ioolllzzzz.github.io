@@ -3,9 +3,12 @@ layout: default
 ---
 
 <div>
-  <wired-button class="btn" onclick="doLucky('qxc')">QiXingCai</wired-button>
+  <!-- <wired-button class="btn" onclick="doLucky('qxc')">QiXingCai</wired-button>
   <wired-button class="btn" onclick="doLucky('dlt')">DaLeTou</wired-button>
   <wired-button class="btn" onclick="doLucky('ssq')">ShuangSeQiu</wired-button>
+  <br><br> -->
+  <wired-button class="btn" onclick="newGo('qxc')">QXC-go🎰</wired-button>
+  <wired-button class="btn" onclick="newDone('qxc')" unlock='dlt'>QXC-done💰</wired-button>
   <br><br>
   <wired-button class="btn" onclick="newGo('dlt')">DaLeTou-go🎰</wired-button>
   <wired-button class="btn" onclick="newDone('dlt')" unlock='dlt'>DaLeTou-done💰</wired-button>
@@ -41,19 +44,19 @@ layout: default
     locked = false
   }
 
-  function doLucky(type) {
-    if (locked) return
-    lock(type)
+  // function doLucky(type) {
+  //   if (locked) return
+  //   lock(type)
 
-    $show.innerHTML = 'Please wait···'
+  //   $show.innerHTML = 'Please wait···'
 
-    setTimeout(() => {
-      var ret = rand(type || 'qxc')
-      $show.innerHTML = type + ': ' + ret
+  //   setTimeout(() => {
+  //     var ret = rand(type || 'qxc')
+  //     $show.innerHTML = type + ': ' + ret
 
-      unlock()
-    }, 88)
-  }
+  //     unlock()
+  //   }, 88)
+  // }
 
   // new
   var newLoop = null
