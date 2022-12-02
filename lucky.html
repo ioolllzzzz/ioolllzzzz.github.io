@@ -7,6 +7,10 @@ layout: default
   <wired-button class="btn" onclick="doLucky('dlt')">DaLeTou</wired-button>
   <wired-button class="btn" onclick="doLucky('ssq')">ShuangSeQiu</wired-button>
   <br><br> -->
+  <wired-button class="btn" onclick="newGo('qxc',true)">QiXingCai</wired-button>
+  <wired-button class="btn" onclick="newGo('dlt',true)">DaLeTou</wired-button>
+  <wired-button class="btn" onclick="newGo('ssq',true)">ShuangSeQiu</wired-button>
+  <br><br>
   <wired-button class="btn" onclick="newGo('qxc')">QXC-go🎰</wired-button>
   <wired-button class="btn" onclick="newDone('qxc')" unlock='qxc'>QXC-done💰</wired-button>
   <br><br>
@@ -60,16 +64,28 @@ layout: default
 
   // new
   var newLoop = null
-  function newGo(type) {
+  var autoType = 'auto'
+  function randDone(){
+    var doneTimer = [2,3,5,8]
+    var timeout = doneTimer[randIdx(doneTimer.length-1)]
+    setTimeout(() => {
+      newDone(autoType)
+    }, timeout*1000);
+  }
+  function newGo(type,isRandDone = false) {
     if (locked) return
-    lock(type)
+    lock(isRandDone ? autoType : type)
 
     clearInterval(newLoop)
 
     var loopCount = 0
     newLoop = setInterval(() => {
-      $show.innerHTML = type + '(' + (++loopCount) + '): ' + rand(type)
+      var html = type + '(' + (++loopCount) + '): ' + rand(type)
+      if(isRandDone) html+='<br> Please wait...'
+      $show.innerHTML = html
     }, 58)
+
+    isRandDone && randDone()
   }
   function newDone(type) {
     if (type !== locked) return
